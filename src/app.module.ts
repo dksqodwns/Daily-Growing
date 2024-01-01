@@ -24,6 +24,7 @@ import { UsersModule } from './users/users.module';
       }),
       inject: [ConfigService],
     }),
+    TypeOrmModule.forFeature([User]),
     ConfigModule.forRoot({
       envFilePath: './.env',
       isGlobal: true,
