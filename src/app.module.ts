@@ -6,6 +6,7 @@ import { Board } from './entities/Board';
 import { Group } from './entities/Group';
 import { User } from './entities/User';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
@@ -27,6 +28,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
       envFilePath: './.env',
       isGlobal: true,
     }),
+    UsersModule,
   ],
   controllers: [AppController],
   providers: [AppService],
